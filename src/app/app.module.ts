@@ -13,7 +13,6 @@ import {AuthProvider} from "../providers/auth/auth";
 import {HttpClientModule} from "@angular/common/http";
 import {JWT_OPTIONS, JwtModule} from '@auth0/angular-jwt';
 import {TabsPage} from "../pages/tabs/tabs";
-import {GetTheLootPage} from "../pages/get-the-loot/get-the-loot";
 
 export function jwtOptionsFactory(storage: Storage) {
   return {
