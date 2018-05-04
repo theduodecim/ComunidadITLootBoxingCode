@@ -1,0 +1,39 @@
+p5canvas {
+
+.content-area {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+}
+
+.canvas-area {
+  position: relative;
+  height: 90%;
+}
+
+.action-button-area {
+  position: relative;
+  height: 10%;
+  background-color: #ddd;
+  display: flex;
+}
+
+.color-red {
+  color: #ff0000;
+}
+
+.color-blue {
+  color: #0000ff;
+}
+
+.color-yellow {
+  color: #ffff00;
+}
+
+.stroke-width {
+  background: transparent;
+}
+
+}

@@ -1,8 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
+    <ion-title align="center">
       Logged in
     </ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="profilePage()"> <!-- the button to add the buddys --->
+        <ion-icon name="md-planet"></ion-icon> <!-- cool icon! :P --->
+      </button>
+    </ion-buttons>
     <ion-buttons end>
       <button ion-button icon-only (click)="logout()">
         <ion-icon name="exit"></ion-icon>
@@ -18,4 +23,5 @@
     Message from the secret service:
     <strong>{{message}}</strong>
   </p>
+  <p5canvas></p5canvas>
 </ion-content>

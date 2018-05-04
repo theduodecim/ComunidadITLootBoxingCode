@@ -4,7 +4,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {LoginPage} from "../pages/login/login";
 import {AuthProvider} from "../providers/auth/auth";
-import {TabsPage} from "../pages/tabs/tabs";
+import {HomePage} from "../pages/home/home";
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +23,7 @@ export class MyApp {
 
     authProvider.authUser.subscribe(jwt => {
       if (jwt) {
-        this.rootPage = TabsPage;
+        this.rootPage = HomePage;
       }
       else {
         this.rootPage = LoginPage;

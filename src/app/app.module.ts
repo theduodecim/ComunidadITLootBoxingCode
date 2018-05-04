@@ -12,7 +12,8 @@ import {Storage, IonicStorageModule} from "@ionic/storage";
 import {AuthProvider} from "../providers/auth/auth";
 import {HttpClientModule} from "@angular/common/http";
 import {JWT_OPTIONS, JwtModule} from '@auth0/angular-jwt';
-import {TabsPage} from "../pages/tabs/tabs";
+import {P5canvasComponent} from "../components/p5canvas/p5canvas";
+
 
 export function jwtOptionsFactory(storage: Storage) {
   return {
@@ -24,11 +25,10 @@ export function jwtOptionsFactory(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     LoginPage,
     SignupPage,
-    TabsPage,
-
+    HomePage,
+    P5canvasComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +50,7 @@ export function jwtOptionsFactory(storage: Storage) {
     HomePage,
     LoginPage,
     SignupPage,
-    TabsPage,
+    P5canvasComponent
   ],
   providers: [
     StatusBar,
