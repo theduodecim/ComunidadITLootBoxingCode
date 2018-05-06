@@ -51,16 +51,41 @@ export class HomePage {
 
 
     p.draw = () => { // draw es un metodo generico de p5 que lo que hace es correr este codigo constantemente y dibuja nuestra dibujo o animacion
-      p.strokeWeight(3);
-      p.background(255, 180, 200);
-      p.rect(40,150,120,30);
-      p.strokeWeight(3);
+  //cambiar numeros por variables para crear animaciones
+      p.background(0, 0, 0);
+      p.strokeWeight(1);
+      p.stroke(220);
+      p.fill(0,0,0);
+      p.rect(40,150,120,30); // front rect
+      p.strokeWeight(1);
+      //rect right size
       p.line(180,120,160,150);
       p.line(180,150,160,180);
+
+      //top base
       p.line(180,120,180,150);
+
+      /* p.line(76,120,80,150);*/ // check
+      //
       p.line(75,120,180,120);
       p.line(40,149,75,120);
-      //aqui la caja fija
+
+      //inner rect
+      p.line(75,125,168,125); // top base
+      p.line(169,125,155,145); // right line
+      p.line(75,125,57,145);  // left line
+      p.line(57,146,154,146); // base
+
+      //the cover of the box
+      p.rect(40,50,120,8); // front rect of the box
+      p.line(175,30,60,30); // top base
+      //rect right size
+      p.line(160,50,175,30); // top base
+      p.line(175,37,175,31);
+
+      //left line of the cover
+      p.line(160,58,175,37);
+      p.line(40,50,60,30)
     };
 
   //luego aqui esta la funcion touchMoved que ejecuta un evento click
