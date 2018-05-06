@@ -51,8 +51,15 @@ export class HomePage {
 
 
     p.draw = () => { // draw es un metodo generico de p5 que lo que hace es correr este codigo constantemente y dibuja nuestra dibujo o animacion
-      p.background(220, 180, 200);
-      p.rect(20,100,120,80);
+      p.strokeWeight(3);
+      p.background(255, 180, 200);
+      p.rect(40,150,120,30);
+      p.strokeWeight(3);
+      p.line(180,120,160,150);
+      p.line(180,150,160,180);
+      p.line(180,120,180,150);
+      p.line(75,120,180,120);
+      p.line(40,149,75,120);
       //aqui la caja fija
     };
 

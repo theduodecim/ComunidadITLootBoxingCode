@@ -20,7 +20,7 @@ export class LoginPage {
     this.navCtrl.push(SignupPage);
   }
 
-  login(value: any) {
+  login(value: any) { // this create the loading window on the button
     let loading = this.loadingCtrl.create({
       spinner: 'bubbles',
       content: 'Logging in ...'
@@ -29,11 +29,12 @@ export class LoginPage {
     loading.present();
 
     this.authProvider
-      .login(value)
-      .pipe(finalize(() => loading.dismiss()))
-      .subscribe(
+      .login(value) // login takes a value so inside of the parameters of login we pass the value of this form inside of this component
+      .pipe(finalize(() => loading.dismiss())) // with this property of observable pipe call that takes finalize
+      // we pass the method dismiss to close the window
+      .subscribe( // this will execute the specified function subscribing the Observable.
         () => {},
-        err => this.handleError(err));
+        err => this.handleError(err)); // catch the errors will create a new loader showing in the screen login fail if this auth has an error
   }
 
   handleError(error: any) {
